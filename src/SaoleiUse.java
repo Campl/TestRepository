@@ -16,4 +16,8 @@ public class SaoleiUse {
             }  
         });
 	}
+
+	public void Test(){
+		System.out.println("Only to Test.");
+	}
 }

@@ -35,7 +35,7 @@ public class SaoleiMain extends JFrame implements MouseListener{
 	private midMouse mid=new midMouse();
 	private boolean[] act=new boolean[480];
 	private actMouse a=new actMouse();
-	private JButton restart=new JButton("Restart");
+	private JButton restart=new JButton("Restart Game");
 	//init
 	
 	public SaoleiMain(){
