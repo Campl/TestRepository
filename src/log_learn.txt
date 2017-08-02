@@ -5,3 +5,13 @@ merge
 只有在开发分支上每个commit都有其独自存在的意义，并且能够编译通过的情况下（能够通过测试就更完美了），才应该选择缺省的合并方式来保留commit历史。
 -no-ff
 Git merge –no-ff 可以保存你之前的分支历史。能够更好的查看 merge历史，以及branch 状态
+
+关于处理设置gitignore之前就push了的文件的问题
+————
+正确的做法应该是：git rm --cached logs/xx.log，然后更新 .gitignore 忽略掉目标文件，最后 git commit -m "We really don't want Git to track this anymore!"
+
+对于一些每个开发者内容都可能不一样但需要在库中有一个模板的文件
+————
+对于充当模版的文件，在文件名上加以区分然后用 Git 记住。比如说实际的配置文件应该叫 database.conf，在写好模版之后可以更名为 database.conf.example。Git 记录 database.conf.example 但是忽略 database.conf。
+每一个人克隆下来之后，复制一份 database.conf.example 为 database.conf 然后修改后者以符合本地的要求。由于后者是在 .gitignore 里的，所以不会被记录，也完全不需要 update-index。
+或者另一种办法为 在项目根路径下写一个初始化脚本，第一次 _clone_ 回来之后运行一下初始化脚本在你的本地生成一些必须要有的文件（但是不如版本控制系统）。
