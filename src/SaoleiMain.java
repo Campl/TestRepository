@@ -39,7 +39,7 @@ public class SaoleiMain extends JFrame implements MouseListener{
 	//init
 	
 	public SaoleiMain(){
-		super("Bird is not a SB");
+		super("Bird is a SB");
 		
 		p1=new JPanel();
 		p1.setLayout(new BoxLayout(p1, BoxLayout.X_AXIS));
@@ -80,10 +80,10 @@ public class SaoleiMain extends JFrame implements MouseListener{
 		for (int i=0;i<480;i++) act[i]=false;
 		easy();
 		
-	}//¹¹Ôì¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª
+	}//ï¿½ï¿½ï¿½ì¡ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	
 	private void easy(){
-		dangers=0;flags=10;rest=71;l1.setText(""+flags);l2.setText("preparing...");
+		dangers=0;flags=10;rest=71;l1.setText(""+flags);l2.setText("Preparing...");
 		for (int i=0;i<480;i++){
 			score[i]=0;
 			opened[i]=false;
@@ -118,7 +118,7 @@ public class SaoleiMain extends JFrame implements MouseListener{
 		//ADD DANGERS
 	}
 	private void normal(){
-		dangers=0;flags=40;rest=216;l1.setText(""+flags);l2.setText("preparing...");
+		dangers=0;flags=40;rest=216;l1.setText(""+flags);l2.setText("Preparing...");
 		for (int i=0;i<480;i++){
 			score[i]=0;
 			opened[i]=false;
@@ -151,7 +151,7 @@ public class SaoleiMain extends JFrame implements MouseListener{
 		//ADD DANGERS
 	}
 	private void hard(){
-		dangers=0;flags=99;rest=381;l1.setText(""+flags);l2.setText("preparing...");
+		dangers=0;flags=99;rest=381;l1.setText(""+flags);l2.setText("Preparing...");
 		for (int i=0;i<480;i++){
 			score[i]=0;
 			opened[i]=false;
@@ -317,7 +317,7 @@ public class SaoleiMain extends JFrame implements MouseListener{
 		for (int i=0;i<maxi;i++){
 			b[i].removeMouseListener(this);
 		}
-		l2.setText("YOU WIN!!!");
+		l2.setText("CONGRATULATIONS!!\nYOU WIN!!!");
 		l2.updateUI();
 	}
 	
