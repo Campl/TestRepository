@@ -1,4 +1,4 @@
-import java.awt.*;
+﻿import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.*;
@@ -39,7 +39,7 @@ public class SaoleiMain extends JFrame implements MouseListener{
 	//init
 	
 	public SaoleiMain(){
-		super("Bird is a SB");
+		super("Bird is a SB!");
 		
 		p1=new JPanel();
 		p1.setLayout(new BoxLayout(p1, BoxLayout.X_AXIS));
