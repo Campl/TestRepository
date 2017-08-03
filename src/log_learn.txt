@@ -6,7 +6,6 @@ merge
 只有在开发分支上每个commit都有其独自存在的意义，并且能够编译通过的情况下（能够通过测试就更完美了），才应该选择缺省的合并方式来保留commit历史。
 --no-ff
 Git merge --no-ff 可以保存你之前的分支历史。能够更好的查看 merge历史，以及branch 状态
-Git merge --no-ff 可以保存你之前的分支历史。能够更好的查看 merge历史，以及branch 状态
 
 关于处理设置gitignore之前就push了的文件的问题
 ————
